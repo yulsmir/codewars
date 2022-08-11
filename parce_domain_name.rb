@@ -17,6 +17,7 @@ def domain_name(url)
     res = new[0].split('.')
     res[0]
   end
+
 end
 
 
