@@ -2,6 +2,8 @@
 
 def cakes(recipe, available)
   check_keys = (recipe.keys).intersection(available.keys)
+
+  # check_keys = recipe.keys & available.keys
   if recipe.keys == check_keys
     res = []
 
@@ -32,3 +34,7 @@ cakes({"eggs"=>4, "flour"=>400},{})
 
 #11
 cakes({"cream"=>200, "flour"=>300, "sugar"=>150, "milk"=>100, "oil"=>100},{"sugar"=>1700, "flour"=>20000, "milk"=>20000, "oil"=>30000, "cream"=>5000})
+
+
+# check_keys = (recipe.keys).intersection(available.keys)
+#<NoMethodError: undefined method `intersection' for ["flour", "sugar", "eggs"]:Array>
