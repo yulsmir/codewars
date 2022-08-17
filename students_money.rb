@@ -49,3 +49,17 @@ geoff = Student.new("Geoff", 0, 3, 0)
 puts most_money([cam, geoff, phil]) #"Phil"
 puts most_money([cam, geoff]) # "all"
 puts most_money([geoff]) # "Geoff"
+
+
+
+
+# class Student
+#   def money
+#     5 * fives + 10 * tens + 20 * twenties
+#   end
+# end
+
+# def most_money(students)
+#   max = students.max_by &:money
+#   students.count { |s| s.money == max.money } > 1 ? "all" : max.name
+# end
