@@ -27,24 +27,24 @@ def most_money(students)
   max_value = count_max.max
 
   res_name = ''
-  result_name = []
+  result_names = []
   res.each do |i|
     i.each_pair do |key, value|
       if value == max_value
         res_name = i.fetch(:name)
-        result_name.push(res_name)
+        result_names.push(res_name)
+      end
+      if result_names.length > 1
+        res_name = 'all'
       end
     end
   end
   res_name
 end
 
-
-
 phil = Student.new("Phil", 2, 2, 1)
 cam = Student.new("Cameron", 2, 2, 0)
 geoff = Student.new("Geoff", 0, 3, 0)
-
 
 puts most_money([cam, geoff, phil]) #"Phil"
 puts most_money([cam, geoff]) # "all"
